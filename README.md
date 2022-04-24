@@ -1,4 +1,4 @@
-# Very short description of the package
+# #CodingInPublic and not in any way ready for actual use
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/desilva/lagrafo.svg?style=flat-square)](https://packagist.org/packages/desilva/lagrafo)
 [![Total Downloads](https://img.shields.io/packagist/dt/desilva/lagrafo.svg?style=flat-square)](https://packagist.org/packages/desilva/lagrafo)
