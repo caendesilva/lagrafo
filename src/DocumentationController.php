@@ -10,16 +10,16 @@ class DocumentationController extends Controller
     /**
      * Show the documentation page.
      *
-     * @param string $page The page (slug) to show.
+     * @param string|null $page The page (slug) to show.
      * @return \Illuminate\View\View
      */
-    public function show(string $page): View
+    public function show(?string $page): View
     {
-        $document = DocumentationPage::findOrFail($page);
+        $document = DocumentationPage::findOrFail($page ?? 'index');
 
-        $document->loadContents()->parseHtml();
+        $document->loadContents()->parseTitle()->parseHtml();
 
-        return view('lagrafo::layout', [
+        return view('lagrafo::documentation', [
             'document' => $document,
         ]);
     }
