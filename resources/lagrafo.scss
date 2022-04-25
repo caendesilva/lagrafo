@@ -7,10 +7,11 @@
  */
 
 #lagrafo-app {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
 
     #navigation-menu {
@@ -18,7 +19,8 @@
         width: 100vw;
         background-color: #ddd;
         padding: 1.5rem;
-        position: absolute;
+        position: fixed;
+        z-index: 20;
         top: 0;
         left: 0;
         display: flex;
@@ -26,6 +28,7 @@
         justify-content: space-between;
         #search-form {
             display: flex;
+            margin-right: 0.75rem;
             #search {
                 margin: 0 0.75rem;
                 padding: 0.25rem 0.5rem;
@@ -43,7 +46,8 @@
         width: 16rem;
         padding: 1rem;
         background-color: #eee;
-        position: absolute;
+        position: fixed;
+        z-index: 10;
         top: 4rem;
 
         #sidebar-navigation {
@@ -81,15 +85,12 @@
     // Overlay overflow is awesome and I'm going to use it.
     //noinspection CssInvalidPropertyValue
     #content {
-        height: calc(100vh - 4rem);
+        min-height: calc(100vh - 4rem);
         width: calc(100vw - 16rem);
         background-color: #fff;
         position: absolute;
         top: 4rem;
         left: 16rem;
-        overflow-y: overlay;
-        overflow-x: hidden;
-
         #document {
             padding: 3rem 4rem;
             max-width: 1000px;

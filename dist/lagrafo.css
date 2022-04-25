@@ -1203,10 +1203,11 @@ pre code.torchlight .summary-caret {
  * Lagrafo Core CSS
  */
 #lagrafo-app {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
@@ -1215,7 +1216,8 @@ pre code.torchlight .summary-caret {
   width: 100vw;
   background-color: #ddd;
   padding: 1.5rem;
-  position: absolute;
+  position: fixed;
+  z-index: 20;
   top: 0;
   left: 0;
   display: flex;
@@ -1224,6 +1226,7 @@ pre code.torchlight .summary-caret {
 }
 #lagrafo-app #navigation-menu #search-form {
   display: flex;
+  margin-right: 0.75rem;
 }
 #lagrafo-app #navigation-menu #search-form #search {
   margin: 0 0.75rem;
@@ -1239,7 +1242,8 @@ pre code.torchlight .summary-caret {
   width: 16rem;
   padding: 1rem;
   background-color: #eee;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   top: 4rem;
 }
 #lagrafo-app #sidebar #sidebar-navigation {
@@ -1272,14 +1276,12 @@ pre code.torchlight .summary-caret {
   height: 4rem;
 }
 #lagrafo-app #content {
-  height: calc(100vh - 4rem);
+  min-height: calc(100vh - 4rem);
   width: calc(100vw - 16rem);
   background-color: #fff;
   position: absolute;
   top: 4rem;
   left: 16rem;
-  overflow-y: overlay;
-  overflow-x: hidden;
 }
 #lagrafo-app #content #document {
   padding: 3rem 4rem;
