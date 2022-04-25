@@ -9,4 +9,4 @@ Route::get('/docs/{page?}', function (string $page = null) {
 
 Route::post('/api/docs/search', [
     DocumentationController::class, 'search'
-])->name('docs.search');
+])->name('docs.search')->middleware('throttle:60,1');
