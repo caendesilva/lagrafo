@@ -30,19 +30,7 @@
             padding-left: 0.5rem;
             padding-right: 0.5rem;
         }
-        #search-form {
-            display: flex;
-            margin-right: 1.5rem;
-            #search {
-                margin: 0 0.75rem;
-                padding: 0.25rem 0.5rem;
-                border-radius: 0.25rem;
-                border: none;
-                &:focus {
-                    outline: 4px rgba(0, 139, 139, 0.325) solid;
-                }
-            }
-        }
+
     }
 
     #sidebar {
@@ -54,8 +42,42 @@
         z-index: 10;
         top: 4rem;
 
+        #sidebar-header {
+            height: 4rem;
+            #search-form {
+                margin-top: 1rem;
+                #search {
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 0.25rem;
+                    border: none;
+                    &:focus {
+                        outline: 4px rgba(0, 139, 139, 0.325) solid;
+
+                    }
+                    width: 100%;
+                }
+                #submit {
+                    visibility: hidden;
+                    position: absolute;
+                    height: 2rem;
+                    margin-left: 1.5rem;
+                    background: darkcyan;
+                    color: white;
+                    padding: 0 0.5rem;
+                    border-radius: 0.25rem;
+                    transition: opacity 0.325s ease-in-out;
+                    opacity: 0;
+                }
+                &:focus-within #submit {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+            }
+        }
+
         #sidebar-navigation {
-            height: calc(100vh - 8rem);
+            height: calc(100vh - 12rem);
             .sidebar-navigation-item {
                 transition: background-color 0.3s ease-in-out;
                 margin-left: -1rem;
@@ -83,6 +105,12 @@
 
         #sidebar-footer {
             height: 4rem;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            line-height: 4rem;
         }
     }
 
@@ -127,7 +155,7 @@
         text-align: center;
         line-height: 2rem;
         width: calc(100vw - 16rem);
-        background-color: #ddd;
+        background-color: rgba(221, 221, 221, 0.5);
     }
 }
 

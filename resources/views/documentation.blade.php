@@ -16,14 +16,17 @@
         </strong>
     </header>
 
-    <form id="search-form" action="{{ route('docs.search') }}" method="POST">
-        <label>
-            <input type="text" id="search" name="search" placeholder="Search..." required>
-        </label>
-        <input type="submit" class="interactive-element">
-    </form>
+
 </nav>
 <aside id="sidebar">
+    <header id="sidebar-header">
+        <form id="search-form" action="{{ route('docs.search') }}" method="POST">
+            <label>
+                <input type="text" id="search" name="search" placeholder="Search..." required>
+            </label>
+            <input type="submit" id="submit" class="interactive-element">
+        </form>
+    </header>
     <nav id="sidebar-navigation">
         <ul id="sidebar-navigation-menu" role="list">
 @foreach(Lagrafo::getSidebarItems() as $item)

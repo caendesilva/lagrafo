@@ -1228,19 +1228,6 @@ pre code.torchlight .summary-caret {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-#lagrafo-app #navigation-menu #search-form {
-  display: flex;
-  margin-right: 1.5rem;
-}
-#lagrafo-app #navigation-menu #search-form #search {
-  margin: 0 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-}
-#lagrafo-app #navigation-menu #search-form #search:focus {
-  outline: 4px rgba(0, 139, 139, 0.325) solid;
-}
 #lagrafo-app #sidebar {
   height: calc(100vh - 4rem);
   width: 16rem;
@@ -1250,8 +1237,39 @@ pre code.torchlight .summary-caret {
   z-index: 10;
   top: 4rem;
 }
+#lagrafo-app #sidebar #sidebar-header {
+  height: 4rem;
+}
+#lagrafo-app #sidebar #sidebar-header #search-form {
+  margin-top: 1rem;
+}
+#lagrafo-app #sidebar #sidebar-header #search-form #search {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  width: 100%;
+}
+#lagrafo-app #sidebar #sidebar-header #search-form #search:focus {
+  outline: 4px rgba(0, 139, 139, 0.325) solid;
+}
+#lagrafo-app #sidebar #sidebar-header #search-form #submit {
+  visibility: hidden;
+  position: absolute;
+  height: 2rem;
+  margin-left: 1.5rem;
+  background: darkcyan;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  transition: opacity 0.325s ease-in-out;
+  opacity: 0;
+}
+#lagrafo-app #sidebar #sidebar-header #search-form:focus-within #submit {
+  visibility: visible;
+  opacity: 1;
+}
 #lagrafo-app #sidebar #sidebar-navigation {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 12rem);
 }
 #lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item {
   transition: background-color 0.3s ease-in-out;
@@ -1278,6 +1296,12 @@ pre code.torchlight .summary-caret {
 }
 #lagrafo-app #sidebar #sidebar-footer {
   height: 4rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 4rem;
 }
 #lagrafo-app #content {
   min-height: calc(100vh - 4rem);
@@ -1315,7 +1339,7 @@ pre code.torchlight .summary-caret {
   text-align: center;
   line-height: 2rem;
   width: calc(100vw - 16rem);
-  background-color: #ddd;
+  background-color: rgba(221, 221, 221, 0.5);
 }
 
 /**
