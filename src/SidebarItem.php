@@ -19,7 +19,7 @@ class SidebarItem
     {
         $matter = YamlFrontMatter::markdownCompatibleParse(file_get_contents($filepath))->matter();
 
-        $this->destination = route('docs', basename($filepath));
+        $this->destination = route('docs', basename($filepath, '.md'));
         $this->label = $matter['label'] ?? $this->slugToTitle(basename($filepath, '.md'));
         $this->priority = $matter['priority'] ?? 500;
         $this->hidden = $matter['hidden'] ?? false;
