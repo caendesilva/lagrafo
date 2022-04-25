@@ -73,6 +73,11 @@ class DocumentationController extends Controller
             $scancount += strlen($searchInstance);
         }
 
+        // Sort the results by the number of occurrences
+        usort($results, function ($a, $b) {
+            return $b['occurrences'] - $a['occurrences'];
+        });
+
         $response = [
             'query' => $query,
             'results' => $results,
