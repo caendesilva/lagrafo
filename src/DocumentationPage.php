@@ -12,9 +12,11 @@ class DocumentationPage
     public string $html;
     public array $data;
 
-    public function __construct(string $filepath)
+    public function __construct(?string $filepath = null)
     {
-        $this->filepath = $filepath;
+        if (isset($filepath)) {
+            $this->filepath = $filepath;
+        }
     }
 
     public function loadFromFile(): self
