@@ -17,7 +17,7 @@ class DocumentationController extends Controller
     {
         $document = DocumentationPage::findOrFail($page ?? 'index');
 
-        $document->loadContents()->parseTitle()->parseHtml();
+        $document->loadFromFile()->parseHtml();
 
         return view('lagrafo::documentation', [
             'document' => $document,
