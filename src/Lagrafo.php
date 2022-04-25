@@ -6,9 +6,12 @@ namespace DeSilva\Lagrafo;
  * @todo Implement caching of compiled Markdown files.
  *       can be done by saving the compiled static HTML
  *       in the Laravel storage and proxying the request.
- *       
+ *
  *       Note that pages using custom content, such as injecting
  *       account information or API tokens must not be cached.
+ *
+ * @todo Add support for nested pages.
+ * @todo Add CommonMark extensions.
  */
 class Lagrafo
 {
