@@ -67,7 +67,7 @@ class DocumentationController extends Controller
             $results[$index] = [
                 'label' => $page->label,
                 'destination' => $page->destination,
-                'occurrences' => substr_count($searchInstance, $query),
+                'occurrences' => substr_count(strtolower($searchInstance), strtolower($query)),
             ];
 
             $scancount += strlen($searchInstance);
