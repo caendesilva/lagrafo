@@ -1215,7 +1215,7 @@ pre code.torchlight .summary-caret {
   height: 4rem;
   width: 100vw;
   background-color: #ddd;
-  padding: 1.5rem;
+  padding: 1rem;
   position: fixed;
   z-index: 20;
   top: 0;
@@ -1224,9 +1224,13 @@ pre code.torchlight .summary-caret {
   align-items: center;
   justify-content: space-between;
 }
+#lagrafo-app #navigation-menu #navigation-header {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 #lagrafo-app #navigation-menu #search-form {
   display: flex;
-  margin-right: 0.75rem;
+  margin-right: 1.5rem;
 }
 #lagrafo-app #navigation-menu #search-form #search {
   margin: 0 0.75rem;
@@ -1251,12 +1255,12 @@ pre code.torchlight .summary-caret {
 }
 #lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item {
   transition: background-color 0.3s ease-in-out;
-  padding: 0.5rem 0.5rem 0.5rem 0.25rem;
   margin-left: -1rem;
+  padding-left: 0.5rem;
   border-left: transparent solid 0.325rem;
 }
 #lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item > a {
-  padding-left: 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.25rem;
   display: block;
 }
 #lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item:hover {
@@ -1309,9 +1313,9 @@ pre code.torchlight .summary-caret {
   height: 4rem;
   padding: 1rem;
   text-align: center;
-  line-height: 1rem;
+  line-height: 2rem;
   width: calc(100vw - 16rem);
-  background-color: #ccc;
+  background-color: #ddd;
 }
 
 /**

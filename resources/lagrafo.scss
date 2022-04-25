@@ -18,7 +18,7 @@
         height: 4rem;
         width: 100vw;
         background-color: #ddd;
-        padding: 1.5rem;
+        padding: 1rem;
         position: fixed;
         z-index: 20;
         top: 0;
@@ -26,9 +26,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        #navigation-header {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
         #search-form {
             display: flex;
-            margin-right: 0.75rem;
+            margin-right: 1.5rem;
             #search {
                 margin: 0 0.75rem;
                 padding: 0.25rem 0.5rem;
@@ -54,10 +58,10 @@
             height: calc(100vh - 8rem);
             .sidebar-navigation-item {
                 transition: background-color 0.3s ease-in-out;
-                padding: 0.5rem 0.5rem 0.5rem 0.25rem;
                 margin-left: -1rem;
+                padding-left: 0.5rem;
                 > a {
-                    padding-left: 0.5rem;
+                    padding: 0.5rem 0.5rem 0.5rem 0.25rem;
                     display: block;
                 }
                 border-left: transparent solid 0.325rem;
@@ -82,8 +86,6 @@
         }
     }
 
-    // Overlay overflow is awesome and I'm going to use it.
-    //noinspection CssInvalidPropertyValue
     #content {
         min-height: calc(100vh - 4rem);
         width: calc(100vw - 16rem);
@@ -123,9 +125,9 @@
         height: 4rem;
         padding: 1rem;
         text-align: center;
-        line-height: 1rem;
+        line-height: 2rem;
         width: calc(100vw - 16rem);
-        background-color: #ccc;
+        background-color: #ddd;
     }
 }
 
