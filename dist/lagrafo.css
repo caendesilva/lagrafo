@@ -1223,6 +1223,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 #lagrafo-app #navigation-menu #search-form {
   display: flex;
 }
+#lagrafo-app #navigation-menu #search-form #search {
+  margin: 0 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+#lagrafo-app #navigation-menu #search-form #search:focus {
+  outline: 4px rgba(0, 139, 139, 0.325) solid;
+}
 #lagrafo-app #sidebar {
   height: calc(100vh - 4rem);
   width: 16rem;

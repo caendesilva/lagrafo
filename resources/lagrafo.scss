@@ -25,6 +25,15 @@
         justify-content: space-between;
         #search-form {
             display: flex;
+            #search {
+                margin: 0 0.75rem;
+                padding: 0.25rem 0.5rem;
+                border-radius: 0.25rem;
+                border: none;
+                &:focus {
+                    outline: 4px rgba(0, 139, 139, 0.325) solid;
+                }
+            }
         }
     }
 

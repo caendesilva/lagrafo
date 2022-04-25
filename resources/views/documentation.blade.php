@@ -18,7 +18,7 @@
 
     <form id="search-form" action="{{ route('docs.search') }}" method="POST">
         <label>
-            <input type="text" name="search" placeholder="Search...">
+            <input type="text" id="search" name="search" placeholder="Search..." required>
         </label>
         <input type="submit" class="interactive-element">
     </form>
