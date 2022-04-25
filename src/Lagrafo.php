@@ -2,6 +2,8 @@
 
 namespace DeSilva\Lagrafo;
 
+use Illuminate\Support\Collection;
+
 /**
  * @todo Implement caching of compiled Markdown files.
  *       can be done by saving the compiled static HTML
@@ -15,6 +17,16 @@ namespace DeSilva\Lagrafo;
  */
 class Lagrafo
 {
+    /**
+     * A mapping of all the Markdown pages. Used to generate the sidebar.
+     */
+    protected Collection $pages;
+
+    public function __construct()
+    {
+        $this->pages = $this->mapPages();
+    }
+
     public function appName(): string
     {
         return config('app.name', 'Lagrafo') . ' Documentation';
@@ -28,5 +40,27 @@ class Lagrafo
     public function styles(): string
     {
         return '<style>' . file_get_contents(__DIR__ . '/../dist/lagrafo.css') . '</style>';
+    }
+
+    protected function mapPages(): Collection
+    {
+        $pages = new Collection();
+
+        foreach (glob(resource_path("docs/*.md")) as $filepath) {
+            $pages->push(new SidebarItem($filepath));
+        }
+
+        $pages = $pages->filter(function (SidebarItem $item) {
+            return ! $item->hidden;
+        });
+
+        $pages = $pages->sortBy('priority');
+
+        return $pages;
+    }
+
+    public function getSidebarItems(): Collection
+    {
+        return $this->pages;
     }
 }

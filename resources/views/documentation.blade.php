@@ -25,16 +25,14 @@
 </nav>
 <aside id="sidebar">
     <nav id="sidebar-navigation">
-        <ul id="sidebar-navigation-menu">
-            <li class="sidebar-navigation-item active" aria-current="page">
-                <a href="{{ Lagrafo::route('index') }}"></a>
+        <ul id="sidebar-navigation-menu" role="list">
+@foreach(Lagrafo::getSidebarItems() as $item)
+            <li {!! $item->destination == request()->url()
+                        ? 'class="sidebar-navigation-item active" aria-current="page"'
+                        : 'class="sidebar-navigation-item"' !!}>
+                <a href="{{ $item->destination }}">{{ $item->label }}</a>
             </li>
-            <li class="sidebar-navigation-item">
-                <a href="{{ Lagrafo::route('index') }}"></a>
-            </li>
-            <li class="sidebar-navigation-item">
-                <a href="{{ Lagrafo::route('index') }}"></a>
-            </li>
+@endforeach
         </ul>
     </nav>
     <footer id="sidebar-footer">
