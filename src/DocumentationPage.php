@@ -2,6 +2,8 @@
 
 namespace DeSilva\Lagrafo;
 
+use Illuminate\Support\Str;
+
 class DocumentationPage
 {
     public string $title;
@@ -32,7 +34,7 @@ class DocumentationPage
     public function parseHtml(): self
     {
         // TODO: Implement parseHtml() method.
-        $this->html = $this->contents;
+        $this->html = Str::markdown($this->contents);
 
         return $this;
     }
