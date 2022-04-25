@@ -15,7 +15,7 @@
     #navigation-menu {
         height: 4rem;
         width: 100vw;
-        background-color: #ccc;
+        background-color: #ddd;
         padding: 1.5rem;
         position: absolute;
         top: 0;
@@ -53,7 +53,7 @@
                 }
                 &.active {
                     &:not(:hover) {
-                        background-color: rgba(221, 221, 221, 0.8);
+                        background-color: rgba(221, 221, 221, 0.5);
                     }
                     > a {
                         color: darkcyan;
