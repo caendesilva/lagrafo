@@ -9,9 +9,18 @@ namespace DeSilva\Lagrafo;
  */
 class Lagrafo
 {
-    // Build your next great package.
+    public function appName(): string
+    {
+        return config('app.name', 'Lagrafo') . ' Documentation';
+    }
+
     public function route(string $destination): string
     {
         return route('docs', $destination);
+    }
+
+    public function styles(): string
+    {
+        return '<style>' . file_get_contents(__DIR__ . '/../dist/lagrafo.css') . '</style>';
     }
 }
