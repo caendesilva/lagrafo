@@ -38,6 +38,29 @@
 
         #sidebar-navigation {
             height: calc(100vh - 8rem);
+            .sidebar-navigation-item {
+                transition: background-color 0.3s ease-in-out;
+                padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+                margin-left: -1rem;
+                > a {
+                    padding-left: 0.5rem;
+                    display: block;
+                }
+                border-left: transparent solid 0.325rem;
+                &:hover {
+                    background-color: #ddd;
+                    transition: background-color 0.2s ease-in-out;
+                }
+                &.active {
+                    &:not(:hover) {
+                        background-color: rgba(221, 221, 221, 0.8);
+                    }
+                    > a {
+                        color: darkcyan;
+                    }
+                    border-left: darkcyan solid 0.325rem;
+                }
+            }
         }
 
         #sidebar-footer {

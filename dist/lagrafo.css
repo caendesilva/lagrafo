@@ -1234,6 +1234,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 #lagrafo-app #sidebar #sidebar-navigation {
   height: calc(100vh - 8rem);
 }
+#lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item {
+  transition: background-color 0.3s ease-in-out;
+  padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+  margin-left: -1rem;
+  border-left: transparent solid 0.325rem;
+}
+#lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item > a {
+  padding-left: 0.5rem;
+  display: block;
+}
+#lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item:hover {
+  background-color: #ddd;
+  transition: background-color 0.2s ease-in-out;
+}
+#lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item.active {
+  border-left: darkcyan solid 0.325rem;
+}
+#lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item.active:not(:hover) {
+  background-color: rgba(221, 221, 221, 0.8);
+}
+#lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item.active > a {
+  color: darkcyan;
+}
 #lagrafo-app #sidebar #sidebar-footer {
   height: 4rem;
 }
