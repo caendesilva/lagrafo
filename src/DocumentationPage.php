@@ -4,10 +4,10 @@ namespace DeSilva\Lagrafo;
 
 class DocumentationPage
 {
-    protected string $title;
-    protected string $filepath;
-    protected string $contents;
-    protected string $html;
+    public string $title;
+    public string $filepath;
+    public string $contents;
+    public string $html;
 
     public function __construct(string $filepath)
     {
