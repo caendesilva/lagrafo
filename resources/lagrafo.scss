@@ -6,14 +6,17 @@
  * Lagrafo Core CSS
  */
 
+body, html {
+    scroll-behavior: smooth;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+}
+
 #lagrafo-app {
     min-height: 100vh;
     width: 100vw;
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
-    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
-
     #sidebar {
         height: 100vh;
         width: 16rem;
