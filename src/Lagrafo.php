@@ -10,4 +10,8 @@ namespace DeSilva\Lagrafo;
 class Lagrafo
 {
     // Build your next great package.
+    public function route(string $destination): string
+    {
+        return route('docs', $destination);
+    }
 }
