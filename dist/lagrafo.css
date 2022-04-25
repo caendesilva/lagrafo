@@ -1303,7 +1303,7 @@ pre code.torchlight .summary-caret {
 #lagrafo-app #content #document {
   padding: 3rem 4rem;
   max-width: 1000px;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 4rem);
 }
 #lagrafo-app #content #document-footer {
   margin-top: 2rem;
