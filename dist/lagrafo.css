@@ -1273,6 +1273,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 #lagrafo-app #content #document {
   padding: 3rem 4rem;
   max-width: 800px;
+  min-height: calc(100vh - 8rem);
 }
 #lagrafo-app #page-footer {
   height: 4rem;
