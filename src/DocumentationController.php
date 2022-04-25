@@ -20,8 +20,11 @@ class DocumentationController extends Controller
 
         $document->loadFromFile()->parseHtml();
 
+        $pagination = new Pagination(basename($document->filepath, '.md'));
+
         return view('lagrafo::documentation', [
             'document' => $document,
+            'pagination' => $pagination,
         ]);
     }
 

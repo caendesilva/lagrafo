@@ -1286,6 +1286,23 @@ pre code.torchlight .summary-caret {
   max-width: 1000px;
   min-height: calc(100vh - 8rem);
 }
+#lagrafo-app #content #document-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+#lagrafo-app #content #pagination a {
+  text-decoration: none;
+}
+#lagrafo-app #content #pagination a span.label {
+  text-decoration: underline;
+}
+#lagrafo-app #content #pagination a#previous {
+  margin-right: 0.25rem;
+}
+#lagrafo-app #content #pagination a#next {
+  margin-left: 0.25rem;
+}
 #lagrafo-app #page-footer {
   height: 4rem;
   padding: 1rem;

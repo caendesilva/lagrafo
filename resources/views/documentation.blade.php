@@ -43,18 +43,19 @@
 </aside>
 <main id="content">
     <article id="document" class="prose">
-        <section>
+        <section id="document-main-content">
             {!! $document->html !!}
         </section>
-        <footer>
-            @isset($document->data['source'])
-                <p>
-                    <a href="{{ $document->data['source'] }}">Edit this page</a>
-                </p>
-            @endisset
+        <footer id="document-footer">
+            <nav id="pagination">
+                {!! $pagination->previous() !!}
 
-            <a href=""><< Previous</a>
-            <a href="">Next >></a>
+                {!! $pagination->next() !!}
+            </nav>
+
+            @isset($document->data['source'])
+                    <a href="{{ $document->data['source'] }}">Edit this page</a>
+            @endisset
         </footer>
     </article>
 

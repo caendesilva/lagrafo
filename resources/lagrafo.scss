@@ -95,8 +95,29 @@
             max-width: 1000px;
             min-height: calc(100vh - 8rem);
         }
+
+        #document-footer {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #pagination {
+            a {
+                text-decoration: none;
+                span.label {
+                    text-decoration: underline;
+                }
+                &#previous {
+                    margin-right: 0.25rem;
+                }
+                &#next {
+                    margin-left: 0.25rem;
+                }
+            }
+        }
     }
- 
+
     #page-footer {
         height: 4rem;
         padding: 1rem;
