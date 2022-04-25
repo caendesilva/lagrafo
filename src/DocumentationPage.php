@@ -11,7 +11,6 @@ class DocumentationPage
     public string $contents;
     public string $html;
     public array $data;
-    public int $priority;
 
     public function __construct(string $filepath)
     {
@@ -24,7 +23,6 @@ class DocumentationPage
         $this->contents = $document->body();
         $this->data = $document->matter();
         $this->title = $this->data['title'] ?? ucwords(basename($this->filepath, '.md'));
-        $this->priority = $this->data['priority'] ?? 500;
 
         return $this;
     }
