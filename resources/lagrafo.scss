@@ -1,5 +1,6 @@
 @use "vendor/preflight.css";
 @use "vendor/typography.css";
+@use "vendor/torchlight.css";
 
 /**
  * Lagrafo Core CSS
@@ -91,11 +92,11 @@
 
         #document {
             padding: 3rem 4rem;
-            max-width: 800px;
+            max-width: 1000px;
             min-height: calc(100vh - 8rem);
         }
     }
-
+ 
     #page-footer {
         height: 4rem;
         padding: 1rem;

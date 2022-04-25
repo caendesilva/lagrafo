@@ -21,7 +21,8 @@
         "php": "^8.0.2",
         "illuminate/support": "^9.0",
         "league/commonmark": "^2.3",
-        "spatie/yaml-front-matter": "^2.0"
+        "spatie/yaml-front-matter": "^2.0",
+        "torchlight/torchlight-commonmark": "^0.5.5"
     },
     "require-dev": {
         "orchestra/testbench": "^7.0",
