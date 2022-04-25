@@ -16,7 +16,7 @@
         </strong>
     </header>
 
-    <form id="search-form" action="" method="GET">
+    <form id="search-form" action="{{ route('docs.search') }}" method="POST">
         <label>
             <input type="text" name="search" placeholder="Search...">
         </label>

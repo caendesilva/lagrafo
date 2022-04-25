@@ -22,6 +22,13 @@ class Lagrafo
      */
     protected Collection $pages;
 
+    /**
+     * An index of page content mapped by page name, used for the search feature.
+     * May very well be rather memory intensive and can be disabled in config.
+     * For sites with a lot of pages/content, use Algolia instead.
+     */
+    protected Collection $searchIndex;
+
     public function __construct()
     {
         $this->pages = $this->mapPages();

@@ -6,3 +6,7 @@ use DeSilva\Lagrafo\DocumentationController;
 Route::get('/docs/{page?}', function (string $page = null) {
     return (new DocumentationController())->show($page);
 })->name('docs');
+
+Route::post('/api/docs/search', [
+    DocumentationController::class, 'search'
+])->name('docs.search');
