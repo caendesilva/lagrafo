@@ -47,15 +47,17 @@
             {!! $document->html !!}
         </section>
         <footer id="document-footer">
+@isset($pagination)
             <nav id="pagination">
                 {!! $pagination->previous() !!}
 
                 {!! $pagination->next() !!}
             </nav>
+@endisset
 
-            @isset($document->data['source'])
-                    <a href="{{ $document->data['source'] }}">Edit this page</a>
-            @endisset
+@isset($document->data['source'])
+            <a href="{{ $document->data['source'] }}">Edit this page</a>
+@endisset
         </footer>
     </article>
 
