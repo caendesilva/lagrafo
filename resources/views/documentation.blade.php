@@ -45,9 +45,6 @@
 </aside>
 <main id="content">
     <article id="document" class="prose">
-        <header>
-            <h1>{{ $document->title }}</h1>
-        </header>
         <section>
             {!! $document->html !!}
         </section>
