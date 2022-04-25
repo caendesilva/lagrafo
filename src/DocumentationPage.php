@@ -46,4 +46,20 @@ class DocumentationPage
 
         return new static($filepath);
     }
+
+    public static function errorNotFoundDocument(?string $page = null): static
+    {
+        $document = new static();
+
+        $document->title = '404 - Page not found';
+
+        if (isset($page)) {
+            $document->contents = "Page `$page` not found.";
+        } else {
+            $document->contents = 'Page not found.';
+        }
+        $document->parseHtml();
+
+        return $document;
+    }
 }

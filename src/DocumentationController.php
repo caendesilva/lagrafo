@@ -2,9 +2,11 @@
 
 namespace DeSilva\Lagrafo;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\View\View;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DocumentationController extends Controller
 {
@@ -16,7 +18,11 @@ class DocumentationController extends Controller
      */
     public function show(?string $page): View
     {
-        $document = DocumentationPage::findOrFail($page ?? 'index');
+        try {
+            $document = DocumentationPage::findOrFail($page ?? 'index');
+        } catch (NotFoundHttpException) {
+            return $this->pageNotFoundView($page);
+        }
 
         $document->loadFromFile()->parseHtml();
 
@@ -102,6 +108,29 @@ class DocumentationController extends Controller
             }
         } else {
             $document->contents .= "\n\n## No results found.\n\n";
+        }
+        $document->parseHtml();
+
+        return view('lagrafo::documentation', [
+            'document' => $document,
+        ]);
+    }
+
+    /**
+     * @param string $page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    protected function pageNotFoundView(?string $page = null)
+    {
+        $document = new DocumentationPage();
+
+        $document->title = '404 - Page not found';
+
+
+        $document->contents = "# 404 - The page you requested could not found. \n";
+
+        if (isset($page)) {
+            $document->contents .= '<p class="lead">No results for page "'.$page.'".</p>';
         }
         $document->parseHtml();
 
