@@ -1,10 +1,20 @@
-# #CodingInPublic and not in any way ready for actual use
+# Lagrafo, for when you just want some documentation.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/desilva/lagrafo.svg?style=flat-square)](https://packagist.org/packages/desilva/lagrafo)
-[![Total Downloads](https://img.shields.io/packagist/dt/desilva/lagrafo.svg?style=flat-square)](https://packagist.org/packages/desilva/lagrafo)
-![GitHub Actions](https://github.com/desilva/lagrafo/actions/workflows/main.yml/badge.svg)
+<p><a href="https://packagist.org/packages/desilva/lagrafo"><img style="display:inline;margin:2px;" src="https://img.shields.io/packagist/v/desilva/lagrafo.svg?style=flat-square" alt="Latest Version on Packagist"></a>
+<a href="https://packagist.org/packages/desilva/lagrafo"><img style="display:inline;margin:2px;" src="https://img.shields.io/packagist/dt/desilva/lagrafo.svg?style=flat-square" alt="Total Downloads"></a>
+<img style="display:inline;margin:2px;" src="https://github.com/caendesilva/lagrafo/actions/workflows/main.yml/badge.svg" alt="GitHub Actions"></p>
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+> **Important** I'm #CodingInPublic, this is not at all ready for production use.
+
+<p class="lead">
+Lagrafo is a simple to the point, documentation site package for Laravel, built to just get some damn documentation without any fuss, configuration, or code.
+</p>
+
+The package is opinionated and may not suit your needs. I originally created it for my own use,
+and don't indend to spending a lot of time on adding an extensive feature set to it.
+If you want a more robust and highly customizable static documentation site, check ouy my other project, HydePHP at [hydephp.github.io](https://hydephp.github.io/)!
+
+> The layout is currently not responsive, but I'm working on it.
 
 ## Installation
 
@@ -16,37 +26,43 @@ composer require desilva/lagrafo
 
 ## Usage
 
-```php
-// Usage description here
-```
+Place markdown files in the `resources/docs` directory,
+and access them through the `/docs/<markdown-slug>` route.
 
-### Testing
+Lagrafo does not really offer any customization options,
+though you can override the automatic sidebar order and labels using optional front matter.
 
-```bash
-composer test
-```
+## About
+### Features
+- Markdown documentation files are automatically discovered
+- Automatic sidebar
+- No configuration
+- Laravel powered routing
+- Lightweight frontend
+- Basic search feature that can return API results
 
-### Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+### Screenshot
 
-## Contributing
+![Screenshot](https://user-images.githubusercontent.com/95144705/165140594-98bbee16-b121-4a82-b8cb-5e39be44afa0.png)
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## Resources
+
+### Contributing
+
+Feel free to fork the project and submit pull requests!
+I'd love to get proper tests in place, if that's something you're interested in.
 
 ### Security
 
 If you discover any security related issues, please email caen@desilva.se instead of using the issue tracker.
 
-## Credits
+### Credits
 
 -   [Caen De Silva](https://github.com/desilva)
 -   [All Contributors](../../contributors)
 
-## License
+### License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
