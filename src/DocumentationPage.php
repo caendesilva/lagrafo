@@ -24,7 +24,7 @@ class DocumentationPage
         $document = (new MarkdownPreprocessor())->process(file_get_contents($this->filepath));
         $this->contents = $document->body();
         $this->data = $document->matter();
-        $this->title = $this->data['title'] ?? ucwords(basename($this->filepath, '.md'));
+        $this->title = $this->data['title'] ??  $this->data['label'] ?? ucwords(basename($this->filepath, '.md'));
 
         return $this;
     }
