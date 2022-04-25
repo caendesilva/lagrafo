@@ -31,8 +31,7 @@ class DocumentationPage
 
     public function parseHtml(): self
     {
-        // TODO: Implement parseHtml() method.
-        $this->html = Str::markdown($this->contents);
+        $this->html = (new MarkdownConverter())->convert($this->contents);
 
         return $this;
     }

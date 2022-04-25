@@ -3,6 +3,7 @@
 namespace DeSilva\Lagrafo;
 
 use Illuminate\Support\Collection;
+use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 /**
  * @todo Implement caching of compiled Markdown files.
@@ -29,9 +30,12 @@ class Lagrafo
      */
     protected Collection $searchIndex;
 
+    public GithubFlavoredMarkdownConverter $markdownConverter;
+
     public function __construct()
     {
         $this->pages = $this->mapPages();
+        $this->markdownConverter = MarkdownConverter::create();
     }
 
     public function appName(): string
@@ -69,5 +73,10 @@ class Lagrafo
     public function getSidebarItems(): Collection
     {
         return $this->pages;
+    }
+
+    public function getInstance(): self
+    {
+        return $this;
     }
 }
