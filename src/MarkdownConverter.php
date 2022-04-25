@@ -2,12 +2,12 @@
 
 namespace DeSilva\Lagrafo;
 
-use Illuminate\Support\Str;
-use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
 use League\CommonMark\GithubFlavoredMarkdownConverter;
 use Torchlight\Commonmark\V2\TorchlightExtension;
+use League\CommonMark\Extension\DescriptionList\DescriptionListExtension;
+use League\CommonMark\Extension\Footnote\FootnoteExtension;
 
 /**
  * Convert a Markdown string to HTML using the CommonMark converter loaded in the Lagrafo Singleton.
@@ -52,6 +52,8 @@ class MarkdownConverter
 
         $converter->getEnvironment()->addExtension(new HeadingPermalinkExtension());
         $converter->getEnvironment()->addExtension(new TorchlightExtension());
+        $converter->getEnvironment()->addExtension(new DescriptionListExtension());
+        $converter->getEnvironment()->addExtension(new FootnoteExtension());
 
         return $converter;
     }

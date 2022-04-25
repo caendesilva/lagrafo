@@ -15,6 +15,11 @@ use League\CommonMark\GithubFlavoredMarkdownConverter;
  *
  * @todo Add support for nested pages.
  * @todo Add CommonMark extensions.
+ *
+ * @info A note about extensions: Lagrafo uses a lot of extensions,
+ *       which is okay as it assumes that the end result will be cached,
+ *       thus making any extension performance impact less of a concern.
+ *       It also assumes that all Markdown input is safe and trusted.
  */
 class Lagrafo
 {
