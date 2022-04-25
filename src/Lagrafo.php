@@ -50,7 +50,11 @@ class Lagrafo
 
     public function styles(): string
     {
-        return '<style>' . file_get_contents(__DIR__ . '/../dist/lagrafo.css') . '</style>';
+        if (app()->environment() === 'local') {
+            return '<style>' . file_get_contents(__DIR__ . '/../dist/lagrafo.css') . '</style>';
+        }
+
+        return '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@master/dist/lagrafo.min.css">';
     }
 
     protected function mapPages(): Collection
