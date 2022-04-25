@@ -47,7 +47,11 @@
             {!! $document->html !!}
         </section>
         <footer>
-            <a href="">Edit this page</a>
+            @isset($document->data['source'])
+                <p>
+                    <a href="{{ $document->data['source'] }}">Edit this page</a>
+                </p>
+            @endisset
 
             <a href=""><< Previous</a>
             <a href="">Next >></a>
