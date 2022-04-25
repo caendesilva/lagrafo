@@ -49,7 +49,7 @@
     </footer>
 </aside>
 <main id="content">
-    <article class="prose">
+    <article id="document" class="prose">
         <header>
             <h1>{{ $document->title }}</h1>
         </header>
@@ -63,11 +63,12 @@
             <a href="">Next >></a>
         </footer>
     </article>
+
+    <footer id="page-footer">
+        <small>
+            Site built with <a href="https://github.com/caendesilva/lagrafo">Lagrafo</a>
+        </small>
+    </footer>
 </main>
-<footer id="page-footer">
-    <small>
-        Site built with <a href="https://github.com/caendesilva/lagrafo">Lagrafo</a>
-    </small>
-</footer>
 </body>
 </html>
