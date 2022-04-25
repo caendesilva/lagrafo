@@ -9,17 +9,14 @@
     {!!  Lagrafo::styles() !!}
 </head>
 <body id="lagrafo-app">
-<nav id="navigation-menu">
-    <header id="navigation-header">
-        <strong>
-            <a href="{{ Lagrafo::route('index') }}">{{ Lagrafo::appName() }}</a>
-        </strong>
-    </header>
-
-
-</nav>
 <aside id="sidebar">
+
     <header id="sidebar-header">
+        <div id="sidebar-brand">
+            <strong>
+                <a href="{{ Lagrafo::route('index') }}">{{ Lagrafo::appName() }}</a>
+            </strong>
+        </div>
         <form id="search-form" action="{{ route('docs.search') }}" method="POST">
             <label>
                 <input type="text" id="search" name="search" placeholder="Search..." required>

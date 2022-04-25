@@ -14,48 +14,39 @@
     overflow-y: auto;
     font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
 
-    #navigation-menu {
-        height: 4rem;
-        width: 100vw;
-        background-color: #ddd;
-        padding: 1rem;
-        position: fixed;
-        z-index: 20;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        #navigation-header {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-        }
-
-    }
-
     #sidebar {
-        height: calc(100vh - 4rem);
+        height: 100vh;
         width: 16rem;
-        padding: 1rem;
         background-color: #eee;
         position: fixed;
         z-index: 10;
-        top: 4rem;
 
         #sidebar-header {
-            height: 4rem;
+            height: 7rem;
+
+            #sidebar-brand {
+                height: 3rem;
+                padding: 1rem;
+
+            }
+
             #search-form {
-                margin-top: 1rem;
+                height: 4rem;
+                padding: 1rem;
+
                 #search {
                     padding: 0.25rem 0.5rem;
                     border-radius: 0.25rem;
                     border: none;
+
                     &:focus {
                         outline: 4px rgba(0, 139, 139, 0.325) solid;
 
                     }
+
                     width: 100%;
                 }
+
                 #submit {
                     visibility: hidden;
                     position: absolute;
@@ -68,6 +59,7 @@
                     transition: opacity 0.325s ease-in-out;
                     opacity: 0;
                 }
+
                 &:focus-within #submit {
                     visibility: visible;
                     opacity: 1;
@@ -77,27 +69,38 @@
         }
 
         #sidebar-navigation {
-            height: calc(100vh - 12rem);
+            height: calc(100vh - 11rem);
+            padding: 1rem;
+
+            border-top: #ddd 1px solid;
+            border-bottom: #ddd 1px solid;
+
             .sidebar-navigation-item {
                 transition: background-color 0.3s ease-in-out;
                 margin-left: -1rem;
                 padding-left: 0.5rem;
+
                 > a {
                     padding: 0.5rem 0.5rem 0.5rem 0.25rem;
                     display: block;
                 }
+
                 border-left: transparent solid 0.325rem;
+
                 &:hover {
                     background-color: #ddd;
                     transition: background-color 0.2s ease-in-out;
                 }
+
                 &.active {
                     &:not(:hover) {
                         background-color: rgba(221, 221, 221, 0.5);
                     }
+
                     > a {
                         color: darkcyan;
                     }
+
                     border-left: darkcyan solid 0.325rem;
                 }
             }
@@ -106,21 +109,23 @@
         #sidebar-footer {
             height: 4rem;
             position: absolute;
+            padding: 1rem;
+
             width: 100%;
             bottom: 0;
             left: 0;
             text-align: center;
-            line-height: 4rem;
+            line-height: 2rem;
         }
     }
 
     #content {
-        min-height: calc(100vh - 4rem);
+        min-height: calc(100vh);
         width: calc(100vw - 16rem);
         background-color: #fff;
         position: absolute;
-        top: 4rem;
         left: 16rem;
+
         #document {
             padding: 3rem 4rem;
             max-width: 1000px;
@@ -136,12 +141,15 @@
         #pagination {
             a {
                 text-decoration: none;
+
                 span.label {
                     text-decoration: underline;
                 }
+
                 &#previous {
                     margin-right: 0.25rem;
                 }
+
                 &#next {
                     margin-left: 0.25rem;
                 }
