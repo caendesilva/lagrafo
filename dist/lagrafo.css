@@ -1328,7 +1328,7 @@ pre code.torchlight .summary-caret {
   text-align: center;
   line-height: 2rem;
   width: calc(100vw - 16rem);
-  background-color: rgba(221, 221, 221, 0.5);
+  background-color: whitesmoke;
 }
 
 /**
