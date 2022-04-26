@@ -14,9 +14,9 @@
 </script>
 <nav id="mobile-navigation">
     <strong>
-        <a href="{{ Lagrafo::route('index') }}">{{ Lagrafo::appName() }}</a>
+        <a href="{{ Lagrafo::route('') }}">{{ Lagrafo::appName() }}</a>
     </strong>
-    <button id="sidebar-toggle" class="active" title="Toggle sidebar" aria-label="Toggle sidebar navigation menu">
+    <button id="sidebar-toggle" title="Toggle sidebar" aria-label="Toggle sidebar navigation menu">
         <span class="icon-bar" role="presentation"></span>
         <span class="icon-bar" role="presentation"></span>
         <span class="icon-bar" role="presentation"></span>
