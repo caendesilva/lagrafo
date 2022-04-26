@@ -1357,10 +1357,14 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #eee;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 8px 12px -3px, rgba(0, 0, 0, 0.1) 0 4px 6px -4px;
     z-index: 100;
     padding: 1rem;
     line-height: 2rem;
+  }
+  #lagrafo-app.js-enabled #mobile-navigation strong {
+    padding: 0 0.5rem;
   }
   #lagrafo-app.js-enabled #mobile-navigation #sidebar-toggle {
     position: relative;
@@ -1375,7 +1379,7 @@ body, html {
     background-color: black;
     position: absolute;
     left: 5.5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-out;
   }
   #lagrafo-app.js-enabled #mobile-navigation #sidebar-toggle span.icon-bar:first-child {
     top: 9px;
@@ -1402,10 +1406,33 @@ body, html {
   #lagrafo-app.js-enabled #sidebar {
     display: none;
   }
+  #lagrafo-app.js-enabled #sidebar.active {
+    display: block;
+  }
+  #lagrafo-app.js-enabled #sidebar #sidebar-header {
+    height: 9rem;
+  }
+  #lagrafo-app.js-enabled #sidebar #sidebar-header #sidebar-brand {
+    height: 4rem;
+    visibility: hidden;
+  }
+  #lagrafo-app.js-enabled #sidebar #sidebar-header #search-form {
+    height: 5rem;
+    padding-top: 1.5rem;
+  }
+  #lagrafo-app.js-enabled #sidebar #sidebar-header #search-form #search {
+    padding: 0.5rem 0.75rem;
+  }
+  #lagrafo-app.js-enabled #sidebar #sidebar-navigation {
+    height: calc(100vh - 13rem);
+  }
   #lagrafo-app.js-enabled #content {
     width: 100vw;
     left: 0;
     top: 4rem;
+  }
+  #lagrafo-app.js-enabled #content #document {
+    padding: 3rem;
   }
   #lagrafo-app.js-enabled #page-footer {
     width: 100vw;

@@ -2,8 +2,24 @@
  * Lagrafo Frontend Scripts
  * @version dev-master
  */
-// On click of sidebar toggle button (no jquery)
-document.getElementById('sidebar-toggle').addEventListener('click', function () {
-    document.getElementById('sidebar-toggle').classList.toggle('active');
+var sidebarOpen = false;
+var sidebarToggleButton = document.getElementById('sidebar-toggle');
+var sidebar = document.getElementById('sidebar');
+function toggleSidebar() {
+    function closeSidebar() {
+        sidebarOpen = false;
+        sidebar.classList.remove('active');
+        sidebarToggleButton.classList.remove('active');
+    }
+    function openSidebar() {
+        sidebarOpen = true;
+        sidebar.classList.add('active');
+        sidebarToggleButton.classList.add('active');
+    }
+    sidebarOpen ? closeSidebar() : openSidebar();
+}
+// On click of sidebar toggle button
+sidebarToggleButton.addEventListener('click', function () {
+    toggleSidebar();
 });
 //# sourceMappingURL=lagrafo.js.map

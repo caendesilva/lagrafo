@@ -196,10 +196,15 @@ body, html {
                 position: fixed;
                 top: 0;
                 left: 0;
-                background-color: #eee;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 8px 12px -3px, rgba(0, 0, 0, 0.1) 0 4px 6px -4px;
                 z-index: 100;
                 padding: 1rem;
                 line-height: 2rem;
+                strong {
+                    padding: 0 0.5rem;
+                }
+
                 // Hamburger menu icon based on Google Material Design Icons, SVG converted to HTML.
                 #sidebar-toggle {
                     position: relative;
@@ -223,7 +228,7 @@ body, html {
                         &:last-child {
                             top: calc(9px + 12px);
                         }
-                        transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-out;
                     }
                     &.active {
                         span.icon-bar {
@@ -246,12 +251,36 @@ body, html {
             }
             #sidebar {
                 display: none;
+                &.active {
+                    display: block;
+                }
+
+                #sidebar-header {
+                    height: 9rem;
+                    #sidebar-brand {
+                        height: 4rem;
+                        visibility: hidden;
+                    }
+                    #search-form {
+                        height: 5rem;
+                        padding-top: 1.5rem;
+                        #search {
+                            padding: 0.5rem 0.75rem;
+                        }
+                    }
+                }
+                #sidebar-navigation {
+                    height: calc(100vh - 13rem);
+                }
             }
 
             #content {
                 width: 100vw;
                 left: 0;
                 top: 4rem;
+                #document {
+                    padding: 3rem;
+                }
             }
 
             #page-footer {
