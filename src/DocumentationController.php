@@ -104,7 +104,7 @@ class DocumentationController extends Controller
         );
         if (count($results) > 0) {
             foreach ($results as $result) {
-                $document->contents .= sprintf("\n\n### [%s](%s?search=%s)\n\n%s occurrences",
+                $document->contents .= sprintf("\n\n### [%s](%s#:~:text=%s)\n\n%s occurrences",
                     e($result['label']),
                     e($result['destination']),
                     urlencode(e($query)),
