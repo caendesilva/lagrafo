@@ -1476,4 +1476,14 @@ html [id], body [id] {
   cursor: pointer;
 }
 
+/**
+ * Accessibility
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /*# sourceMappingURL=lagrafo.css.map */

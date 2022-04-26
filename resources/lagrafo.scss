@@ -326,3 +326,15 @@ html [id], body [id] {
     left: 0;
     cursor: pointer;
 }
+
+/**
+ * Accessibility
+ */
+
+// If prefers-reduced-motion is set, disable all animations
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
