@@ -1345,6 +1345,9 @@ body, html {
  * The reason for this is that if it is hidden using CSS media queries and the mobile
  * device does not support JavaScript the user won't be able to open the sidebar at all.
  */
+#lagrafo-app {
+  transition: background-color 0.3s ease-out;
+}
 #lagrafo-app #mobile-navigation {
   display: none;
 }
