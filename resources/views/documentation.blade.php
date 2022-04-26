@@ -9,8 +9,21 @@
     {!!  Lagrafo::styles() !!}
 </head>
 <body id="lagrafo-app">
+<script>
+    document.body.classList.add('js-enabled');
+</script>
+<nav id="mobile-navigation">
+    <strong>
+        <a href="{{ Lagrafo::route('index') }}">{{ Lagrafo::appName() }}</a>
+    </strong>
+    <button id="sidebar-toggle" class="active" title="Toggle sidebar" aria-label="Toggle sidebar navigation menu">
+        <span class="icon-bar" role="presentation"></span>
+        <span class="icon-bar" role="presentation"></span>
+        <span class="icon-bar" role="presentation"></span>
+        <span class="icon-bar" role="presentation"></span>
+    </button>
+</nav>
 <aside id="sidebar">
-
     <header id="sidebar-header">
         <div id="sidebar-brand">
             <strong>

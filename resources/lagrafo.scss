@@ -174,6 +174,96 @@ body, html {
 }
 
 /**
+ * Lagrafo Responsive Styles
+ *
+ * The sidebar media queries are only enabled if JavaScript is supported.
+ * The reason for this is that if it is hidden using CSS media queries and the mobile
+ * device does not support JavaScript the user won't be able to open the sidebar at all.
+ */
+
+#lagrafo-app {
+    // Hide the mobile navigation by default as the interaction depends on JavaScript.
+    #mobile-navigation {
+        display: none;
+    }
+    &.js-enabled {
+        @media (max-width: 767px) {
+            #mobile-navigation {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 4rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #eee;
+                z-index: 100;
+                padding: 1rem;
+                line-height: 2rem;
+                // Hamburger menu icon based on Google Material Design Icons, SVG converted to HTML.
+                #sidebar-toggle {
+                    position: relative;
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    span.icon-bar {
+                        display: block;
+                        width: 20px;
+                        height: 2.5px;
+                        background-color: black;
+                        position: absolute;
+                        left: 5.5px;
+                        &:first-child {
+                            top: 9px;
+                        }
+                        &:nth-child(2), &:nth-child(3) {
+                            top: calc(9px + 6px);
+                            transform-origin: center;
+                        }
+                        &:last-child {
+                            top: calc(9px + 12px);
+                        }
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &.active {
+                        span.icon-bar {
+                            &:first-child {
+                                opacity: 0;
+                            }
+                            &:nth-child(2) {
+                                transform: rotate(45deg);
+                            }
+                            &:nth-child(3) {
+                                transform: rotate(-45deg);
+                            }
+                            &:last-child {
+                                opacity: 0;
+
+                            }
+                        }
+                    }
+                }
+            }
+            #sidebar {
+                display: none;
+            }
+
+            #content {
+                width: 100vw;
+                left: 0;
+                top: 4rem;
+            }
+
+            #page-footer {
+                width: 100vw;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+/**
  * Lagrafo Utilities
  */
 
