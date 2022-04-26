@@ -1345,4 +1345,8 @@ body, html {
   cursor: pointer;
 }
 
+html [id], body [id] {
+  scroll-margin: 1rem;
+}
+
 /*# sourceMappingURL=lagrafo.css.map */
