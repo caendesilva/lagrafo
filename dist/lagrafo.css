@@ -1427,6 +1427,9 @@ body, html {
   #lagrafo-app.js-enabled #sidebar #sidebar-header #search-form #search {
     padding: 0.5rem 0.75rem;
   }
+  #lagrafo-app.js-enabled #sidebar #sidebar-header #search-form #submit {
+    height: 2.5rem;
+  }
   #lagrafo-app.js-enabled #sidebar #sidebar-navigation {
     height: calc(100vh - 13rem);
   }
