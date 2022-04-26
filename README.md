@@ -14,10 +14,10 @@ Lagrafo is a simple to the point, documentation site package for Laravel, built 
 </p>
 
 The package is opinionated and may not suit your needs. I originally created it for my own use,
-and don't indend to spending a lot of time on adding an extensive feature set to it.
+and don't intend to spending a lot of time on adding an extensive feature set to it.
 If you want a more robust and highly customizable static documentation site, check ouy my other project, HydePHP at [hydephp.github.io](https://hydephp.github.io/)!
 
-> The layout is currently not responsive, but I'm working on it.
+> This package is still in development and is not suited for production use. Versions in the v0.x range have no backwards-compatibility guarantees.
 
 ## Installation
 
