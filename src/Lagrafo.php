@@ -62,6 +62,11 @@ class Lagrafo
         return '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@master/dist/lagrafo.min.css">';
     }
 
+    public function scripts(): string
+    {
+        return '<script defer>' . file_get_contents(__DIR__ . '/../dist/lagrafo.js') . '</script>';
+    }
+
     protected function mapPages(): Collection
     {
         $pages = new Collection();

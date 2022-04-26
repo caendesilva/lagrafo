@@ -67,5 +67,6 @@
         </small>
     </footer>
 </main>
+{!!  Lagrafo::scripts() !!}
 </body>
 </html>
