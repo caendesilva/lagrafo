@@ -27,6 +27,7 @@ class MarkdownConverter
         $html = \Lagrafo::getInstance()->markdownConverter->convertToHtml($markdown);
 
         // Run any post-processors
+        // Important: If your post-processor injects dynamic content, you may need to disable the cache
 
         // Return HTML
         return $html;
