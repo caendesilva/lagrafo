@@ -28,14 +28,12 @@ function toggleSidebar() {
         backdrop.addEventListener('click', closeSidebar);
         document.body.appendChild(backdrop);
         document.getElementById('content').classList.add('sidebar-active');
-        document.body.style.background = 'black';
     }
     function removeBackdropElement() {
         if (backdrop.parentNode) {
             backdrop.parentNode.removeChild(backdrop);
         }
         document.getElementById('content').classList.remove('sidebar-active');
-        document.body.style.background = '';
     }
 }
 // On click of sidebar toggle button

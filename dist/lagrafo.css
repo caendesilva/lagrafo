@@ -1345,9 +1345,6 @@ body, html {
  * The reason for this is that if it is hidden using CSS media queries and the mobile
  * device does not support JavaScript the user won't be able to open the sidebar at all.
  */
-#lagrafo-app {
-  transition: background-color 0.3s ease-out;
-}
 #lagrafo-app #mobile-navigation {
   display: none;
 }
@@ -1441,13 +1438,13 @@ body, html {
     left: 0;
     top: 4rem;
     background-color: #F9F9F9;
-    transition: opacity 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
   }
   #lagrafo-app.js-enabled #content #document {
     padding: 3rem;
   }
   #lagrafo-app.js-enabled #content.sidebar-active {
-    opacity: 0.5;
+    background-color: #7e7e7e;
   }
   #lagrafo-app.js-enabled #page-footer {
     width: 100vw;
