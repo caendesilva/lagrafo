@@ -167,6 +167,9 @@ body, html {
         line-height: 2rem;
         width: calc(100vw - 16rem);
         background-color: whitesmoke;
+        a {
+            text-decoration: underline;
+        }
     }
 }
 

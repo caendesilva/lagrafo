@@ -1334,6 +1334,9 @@ body, html {
   width: calc(100vw - 16rem);
   background-color: whitesmoke;
 }
+#lagrafo-app #page-footer a {
+  text-decoration: underline;
+}
 
 /**
  * Lagrafo Utilities
