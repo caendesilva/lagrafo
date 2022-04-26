@@ -59,12 +59,15 @@ class Lagrafo
             return '<style>' . file_get_contents(__DIR__ . '/../dist/lagrafo.css') . '</style>';
         }
 
-        return '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@master/dist/lagrafo.min.css">';
+        return '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@v0.1.0-beta/dist/lagrafo.min.css">';
     }
 
     public function scripts(): string
     {
-        return '<script defer>' . file_get_contents(__DIR__ . '/../dist/lagrafo.js') . '</script>';
+        if (app()->environment() === 'local') {
+            return '<script defer>' . file_get_contents(__DIR__ . '/../dist/lagrafo.js') . '</script>';
+        }
+        return '<script defer src="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@v0.1.0-beta/dist/lagrafo.min.js"></script>';
     }
 
     protected function mapPages(): Collection

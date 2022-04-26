@@ -2,7 +2,10 @@
 
 <p><a href="https://packagist.org/packages/desilva/lagrafo"><img style="display:inline;margin:2px;" src="https://img.shields.io/packagist/v/desilva/lagrafo.svg?style=flat-square" alt="Latest Version on Packagist"></a>
 <a href="https://packagist.org/packages/desilva/lagrafo"><img style="display:inline;margin:2px;" src="https://img.shields.io/packagist/dt/desilva/lagrafo.svg?style=flat-square" alt="Total Downloads"></a>
-<img style="display:inline;margin:2px;" src="https://github.com/caendesilva/lagrafo/actions/workflows/main.yml/badge.svg" alt="GitHub Actions"></p>
+<img style="display:inline;margin:2px;" src="https://github.com/caendesilva/lagrafo/actions/workflows/main.yml/badge.svg" alt="GitHub Actions">
+</p>
+
+![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hm/caendesilva/lagrafo)
 
 > **Important** I'm #CodingInPublic, this is not at all ready for production use.
 
@@ -22,6 +25,14 @@ You can install the package via composer:
 
 ```bash
 composer require desilva/lagrafo
+```
+
+### Frontend Assets
+The frontend styles and scripts are served through the jsDelivr CDN.
+They are added here for reference, but are already included in the layout.
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@v0.1.0-beta/dist/lagrafo.min.css">
+<script defer src="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@v0.1.0-beta/dist/lagrafo.min.js"></script>
 ```
 
 ## Usage
