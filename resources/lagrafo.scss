@@ -197,7 +197,7 @@ body, html {
                 top: 0;
                 left: 0;
                 background-color: #fff;
-                box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.1) 0 8px 12px -3px, rgba(0, 0, 0, 0.1) 0 4px 6px -4px;
+                box-shadow: rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0) 0 0 0 0, rgba(0, 0, 0, 0.075) 0 8px 12px -3px, rgba(0, 0, 0, 0.075) 0 4px 6px -4px;
                 z-index: 100;
                 padding: 1rem;
                 line-height: 2rem;
@@ -281,6 +281,8 @@ body, html {
                 #document {
                     padding: 3rem;
                 }
+
+                background-color: #F9F9F9;
             }
 
             #page-footer {
