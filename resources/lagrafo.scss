@@ -78,6 +78,8 @@ body, html {
             border-top: #ddd 1px solid;
             border-bottom: #ddd 1px solid;
 
+            overflow-y: auto;
+
             .sidebar-navigation-item {
                 transition: background-color 0.3s ease-in-out;
                 margin-left: -1rem;

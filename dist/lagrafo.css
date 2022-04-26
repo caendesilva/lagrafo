@@ -1263,6 +1263,7 @@ body, html {
   padding: 1rem;
   border-top: #ddd 1px solid;
   border-bottom: #ddd 1px solid;
+  overflow-y: auto;
 }
 #lagrafo-app #sidebar #sidebar-navigation .sidebar-navigation-item {
   transition: background-color 0.3s ease-in-out;
