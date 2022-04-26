@@ -1404,11 +1404,14 @@ body, html {
     opacity: 0;
   }
   #lagrafo-app.js-enabled #sidebar {
-    display: none;
+    visibility: hidden;
+    left: -16rem;
+    transition: all 0.3s ease-out;
     box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
   }
   #lagrafo-app.js-enabled #sidebar.active {
-    display: block;
+    visibility: visible;
+    left: 0;
   }
   #lagrafo-app.js-enabled #sidebar #sidebar-header {
     height: 9rem;
@@ -1432,9 +1435,13 @@ body, html {
     left: 0;
     top: 4rem;
     background-color: #F9F9F9;
+    transition: opacity 0.3s ease-out;
   }
   #lagrafo-app.js-enabled #content #document {
     padding: 3rem;
+  }
+  #lagrafo-app.js-enabled #content.sidebar-active {
+    opacity: 0.5;
   }
   #lagrafo-app.js-enabled #page-footer {
     width: 100vw;
@@ -1457,12 +1464,10 @@ html [id], body [id] {
 .backdrop {
   width: 100vw;
   height: 100vh;
-  background: rgba(128, 128, 128, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   cursor: pointer;
-  transition: opacity 0.3s ease-out;
 }
 
 /*# sourceMappingURL=lagrafo.css.map */

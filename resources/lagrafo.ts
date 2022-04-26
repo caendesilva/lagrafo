@@ -16,6 +16,8 @@ function toggleSidebar() {
         // Remove the backdrop
         const backdrop = document.getElementById('sidebar-backdrop') as HTMLDivElement;
         backdrop.parentNode.removeChild(backdrop);
+        document.getElementById('content').classList.remove('sidebar-active');
+        document.body.style.background = '';
     }
 
     function openSidebar() {
@@ -27,8 +29,11 @@ function toggleSidebar() {
         backdrop.id = 'sidebar-backdrop';
         backdrop.title = 'Click to close sidebar';
         backdrop.classList.add('backdrop');
+        backdrop.classList.add('active');
         backdrop.addEventListener('click', closeSidebar);
         document.body.appendChild(backdrop);
+        document.getElementById('content').classList.add('sidebar-active');
+        document.body.style.background = 'black';
     }
 
     sidebarOpen ? closeSidebar() : openSidebar();

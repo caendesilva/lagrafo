@@ -250,9 +250,12 @@ body, html {
                 }
             }
             #sidebar {
-                display: none;
+                visibility: hidden;
+                left: -16rem;
+                transition: all 0.3s ease-out;
                 &.active {
-                    display: block;
+                    visibility: visible;
+                    left: 0;
                 }
                 box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
                 #sidebar-header {
@@ -283,6 +286,10 @@ body, html {
                 }
 
                 background-color: #F9F9F9;
+                transition: opacity 0.3s ease-out;
+                &.sidebar-active {
+                    opacity: 0.5;
+                }
             }
 
             #page-footer {
@@ -310,10 +317,8 @@ html [id], body [id] {
 .backdrop {
     width: 100vw;
     height: 100vh;
-    background: rgba(128, 128, 128, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     cursor: pointer;
-    transition: opacity 0.3s ease-out;
 }
