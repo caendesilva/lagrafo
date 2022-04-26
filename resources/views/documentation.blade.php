@@ -19,7 +19,7 @@
         </div>
         <form id="search-form" action="{{ route('docs.search') }}" method="POST">
             <label>
-                <input type="text" id="search" name="search" placeholder="Search..." value="{{ request()->get('search') }}" required>
+                <input type="search" id="search" name="search" placeholder="Search..." value="{{ request()->get('search') }}" required>
             </label>
             <input type="submit" id="submit" class="interactive-element">
         </form>
