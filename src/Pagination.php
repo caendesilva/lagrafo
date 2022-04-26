@@ -19,9 +19,11 @@ class Pagination
 
     protected static function mapToArray(Collection $collection): array
     {
-        return $collection->map(function ($item) {
-            return  basename($item->destination);
-        })->toArray();
+        $array = [];
+        foreach ($collection as $item) {
+            $array[] = basename($item->destination);
+        }
+        return $array;
     }
 
     protected function getPrevious(): string
