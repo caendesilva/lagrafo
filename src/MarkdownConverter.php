@@ -8,6 +8,7 @@ use League\CommonMark\GithubFlavoredMarkdownConverter;
 use Torchlight\Commonmark\V2\TorchlightExtension;
 use League\CommonMark\Extension\DescriptionList\DescriptionListExtension;
 use League\CommonMark\Extension\Footnote\FootnoteExtension;
+use League\CommonMark\Extension\DisallowedRawHtml\DisallowedRawHtmlExtension;
 
 /**
  * Convert a Markdown string to HTML using the CommonMark converter loaded in the Lagrafo Singleton.
@@ -28,6 +29,7 @@ class MarkdownConverter
 
         // Run any post-processors
         // Important: If your post-processor injects dynamic content, you may need to disable the cache
+        $html = PostProcessors::run($html);
 
         // Return HTML
         return $html;
@@ -45,6 +47,9 @@ class MarkdownConverter
                 'fragment_prefix' => '',
                 'symbol' => '',
             ],
+            'disallowed_raw_html' => [
+                'disallowed_tags' => [],
+            ],
         ];
 
         $converter = new GithubFlavoredMarkdownConverter($config);
@@ -55,6 +60,7 @@ class MarkdownConverter
         $converter->getEnvironment()->addExtension(new TorchlightExtension());
         $converter->getEnvironment()->addExtension(new DescriptionListExtension());
         $converter->getEnvironment()->addExtension(new FootnoteExtension());
+        $converter->getEnvironment()->addExtension(new DisallowedRawHtmlExtension());
 
         return $converter;
     }
