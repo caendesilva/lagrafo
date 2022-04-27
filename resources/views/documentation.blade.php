@@ -87,5 +87,6 @@
     </footer>
 </main>
 {!!  Lagrafo::scripts() !!}
+{!!  Lagrafo::customScripts() !!}
 </body>
 </html>

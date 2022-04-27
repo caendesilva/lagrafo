@@ -79,6 +79,15 @@ class Lagrafo
         return '<script defer src="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@v0.1.0-beta/dist/lagrafo.min.js"></script>';
     }
 
+    public function customScripts(): string
+    {
+        if (! file_exists(resource_path('/docs/scripts.js'))) {
+            return '';
+        }
+
+        return '<script>' . file_get_contents(resource_path('/docs/scripts.js')) . '</script>';
+    }
+
     protected function mapPages(): Collection
     {
         $pages = new Collection();
