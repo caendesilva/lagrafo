@@ -84,7 +84,9 @@ class Lagrafo
         $pages = new Collection();
 
         foreach (glob(resource_path("docs/*.md")) as $filepath) {
-            $pages->push(new SidebarItem($filepath));
+            if (! str_starts_with(basename($filepath), '_')) {
+                $pages->push(new SidebarItem($filepath));
+            }
         }
 
         $pages = $pages->filter(function (SidebarItem $item) {
