@@ -62,6 +62,15 @@ class Lagrafo
         return '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/caendesilva/lagrafo@v0.1.0-beta/dist/lagrafo.min.css">';
     }
 
+    public function customStyles(): string
+    {
+        if (! file_exists(resource_path('/docs/styles.css'))) {
+            return '';
+        }
+
+        return '<style>' . file_get_contents(resource_path('/docs/styles.css')) . '</style>';
+    }
+
     public function scripts(): string
     {
         if (app()->environment() === 'local') {
