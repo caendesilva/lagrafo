@@ -78,12 +78,7 @@
     </article>
 
     <footer id="page-footer">
-        <small style="padding-right: 1rem; margin-right: 1rem; border-right: 2px solid lightgray;">
-            Site built with <a href="https://github.com/caendesilva/lagrafo">Lagrafo</a>
-        </small>
-        <small>
-            Syntax highlighting provided by <a href="https://torchlight.dev/">Torchlight.dev</a>
-        </small>
+        {!! Lagrafo::footer() !!}
     </footer>
 </main>
 {!!  Lagrafo::scripts() !!}

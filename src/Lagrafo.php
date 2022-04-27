@@ -3,6 +3,8 @@
 namespace DeSilva\Lagrafo;
 
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Str;
 use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 /**
@@ -86,6 +88,24 @@ class Lagrafo
         }
 
         return '<script>' . file_get_contents(resource_path('/docs/scripts.js')) . '</script>';
+    }
+
+    public function footer(): string
+    {
+        if (file_exists(resource_path('/docs/_footer.blade.php'))) {
+            return Blade::render(file_get_contents(resource_path('/docs/_footer.blade.php')));
+        }
+
+        if (file_exists(resource_path('/docs/_footer.md'))) {
+            return Str::markdown(file_get_contents(resource_path('/docs/_footer.md')));
+        }
+
+        return '<small style="padding-right: 1rem; margin-right: 1rem; border-right: 2px solid lightgray;">
+            Site built with <a href="https://github.com/caendesilva/lagrafo">Lagrafo</a>
+        </small>
+        <small>
+            Syntax highlighting provided by <a href="https://torchlight.dev/">Torchlight.dev</a>
+        </small>';
     }
 
     protected function mapPages(): Collection
