@@ -2,6 +2,7 @@
 
 namespace DeSilva\Lagrafo;
 
+use DeSilva\Lagrafo\PreProcessors\MarkdownPreprocessor;
 use Illuminate\Support\Str;
 
 class DocumentationPage
