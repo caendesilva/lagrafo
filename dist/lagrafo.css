@@ -1329,7 +1329,7 @@ html {
   margin-left: 0.25rem;
 }
 #lagrafo-app #page-footer {
-  height: 4rem;
+  min-height: 4rem;
   padding: 1rem;
   text-align: center;
   line-height: 2rem;
