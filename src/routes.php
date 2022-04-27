@@ -5,7 +5,7 @@ use DeSilva\Lagrafo\DocumentationController;
 
 Route::get('/docs/{page?}', function (string $page = null) {
     return (new DocumentationController())->show($page);
-})->name('docs');
+})->name('docs')->middleware('web');
 
 Route::post('/api/docs/search', [
     DocumentationController::class, 'search'
