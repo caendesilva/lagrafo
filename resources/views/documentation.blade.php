@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ Lagrafo::appName() }} - {{ $document->title }}</title>
     {!!  Lagrafo::styles() !!}
+    {!!  Lagrafo::customStyles() !!}
 </head>
-<body id="lagrafo-app">
+<body id="lagrafo-app" @class([
+    'auth' => Auth::check(),
+])>
 <script>
     document.body.classList.add('js-enabled');
 </script>
@@ -75,8 +78,11 @@
     </article>
 
     <footer id="page-footer">
-        <small>
+        <small style="padding-right: 1rem; margin-right: 1rem; border-right: 2px solid lightgray;">
             Site built with <a href="https://github.com/caendesilva/lagrafo">Lagrafo</a>
+        </small>
+        <small>
+            Syntax highlighting provided by <a href="https://torchlight.dev/">Torchlight.dev</a>
         </small>
     </footer>
 </main>
